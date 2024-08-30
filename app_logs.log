@@ -1,0 +1,29 @@
+2023-12-24 00:26:59,159 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-12-24 00:26:59,159 - INFO - [33mPress CTRL+C to quit[0m
+2023-12-24 00:27:31,873 - INFO - 127.0.0.1 - - [24/Dec/2023 00:27:31] "GET / HTTP/1.1" 200 -
+2023-12-24 00:27:31,944 - INFO - 127.0.0.1 - - [24/Dec/2023 00:27:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-12-24 00:27:34,029 - INFO - 127.0.0.1 - - [24/Dec/2023 00:27:34] "GET / HTTP/1.1" 200 -
+2023-12-24 00:27:34,044 - INFO - 127.0.0.1 - - [24/Dec/2023 00:27:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-12-24 00:27:35,135 - INFO - 127.0.0.1 - - [24/Dec/2023 00:27:35] "GET / HTTP/1.1" 200 -
+2023-12-24 00:27:35,147 - INFO - 127.0.0.1 - - [24/Dec/2023 00:27:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-12-24 00:27:35,625 - INFO - 127.0.0.1 - - [24/Dec/2023 00:27:35] "GET / HTTP/1.1" 200 -
+2023-12-24 00:27:35,633 - INFO - 127.0.0.1 - - [24/Dec/2023 00:27:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-12-24 00:27:35,849 - INFO - 127.0.0.1 - - [24/Dec/2023 00:27:35] "GET / HTTP/1.1" 200 -
+2023-12-24 00:27:35,861 - INFO - 127.0.0.1 - - [24/Dec/2023 00:27:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-12-24 00:27:36,191 - INFO - 127.0.0.1 - - [24/Dec/2023 00:27:36] "GET / HTTP/1.1" 200 -
+2023-12-24 00:27:36,198 - INFO - 127.0.0.1 - - [24/Dec/2023 00:27:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-12-24 00:27:36,412 - INFO - 127.0.0.1 - - [24/Dec/2023 00:27:36] "GET / HTTP/1.1" 200 -
+2023-12-24 00:27:36,427 - INFO - 127.0.0.1 - - [24/Dec/2023 00:27:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2023-12-24 00:27:53,226 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-12-24 00:27:53,226 - INFO - [33mPress CTRL+C to quit[0m
+2023-12-24 00:29:03,563 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-12-24 00:29:03,566 - INFO - [33mPress CTRL+C to quit[0m
+2023-12-24 00:29:03,566 - INFO -  * Restarting with stat
+2023-12-24 00:29:13,135 - WARNING -  * Debugger is active!
+2023-12-24 00:29:13,135 - INFO -  * Debugger PIN: 185-652-203
+2023-12-24 00:31:34,605 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-12-24 00:31:34,605 - INFO - [33mPress CTRL+C to quit[0m

@@ -1,0 +1,126 @@
+INFO:root:Random forest: Accuracy on training Data: 0.820
+INFO:root:Random forest: Accuracy on test Data: 0.816
+INFO:root:Cross-validation scores: [0.805625 0.81     0.814375 0.831875 0.816875]
+INFO:root:Mean CV accuracy: 0.816
+INFO:root:Best parameters: {'max_depth': None, 'n_estimators': 150}
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Random forest: Accuracy on training Data: 0.819
+INFO:root:Random forest: Accuracy on test Data: 0.816
+INFO:root:Cross-validation scores: [0.806875 0.815    0.81375  0.830625 0.81875 ]
+INFO:root:Mean CV accuracy: 0.817
+INFO:root:Best parameters: {'max_depth': None, 'n_estimators': 50}
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Random forest: Accuracy on training Data: 0.814
+INFO:root:Random forest: Accuracy on test Data: 0.812
+INFO:root:Cross-validation scores: [0.81     0.814375 0.81     0.8325   0.818125]
+INFO:root:Mean CV accuracy: 0.817
+INFO:root:Best parameters: {'max_depth': None, 'n_estimators': 50}
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+INFO:root:Random forest: Accuracy on training Data: 0.821
+INFO:root:Random forest: Accuracy on test Data: 0.818
+INFO:root:Cross-validation scores: [0.80875  0.815    0.815625 0.833125 0.8175  ]
+INFO:root:Mean CV accuracy: 0.818
+INFO:root:Best parameters: {'max_depth': None, 'n_estimators': 150}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 185-652-203
+INFO:root:Random forest: Accuracy on training Data: 0.819
+INFO:root:Random forest: Accuracy on test Data: 0.817
+INFO:root:Cross-validation scores: [0.805    0.81875  0.813125 0.8325   0.813125]
+INFO:root:Mean CV accuracy: 0.817
+INFO:root:Best parameters: {'max_depth': None, 'n_estimators': 50}
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+INFO:root:Random forest: Accuracy on training Data: 0.818
+INFO:root:Random forest: Accuracy on test Data: 0.819
+INFO:root:Cross-validation scores: [0.809375 0.811875 0.8125   0.83125  0.816875]
+INFO:root:Mean CV accuracy: 0.816
+INFO:root:Best parameters: {'max_depth': None, 'n_estimators': 150}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 185-652-203
+INFO:root:Random forest: Accuracy on training Data: 0.818
+INFO:root:Random forest: Accuracy on test Data: 0.815
+INFO:root:Cross-validation scores: [0.808125 0.813125 0.81375  0.8325   0.815625]
+INFO:root:Mean CV accuracy: 0.817
+INFO:root:Best parameters: {'max_depth': None, 'n_estimators': 150}
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+INFO:root:Random forest: Accuracy on training Data: 0.816
+INFO:root:Random forest: Accuracy on test Data: 0.815
+INFO:root:Cross-validation scores: [0.80625 0.81375 0.81125 0.8325  0.82   ]
+INFO:root:Mean CV accuracy: 0.817
+INFO:root:Best parameters: {'max_depth': None, 'n_estimators': 50}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 185-652-203
+INFO:root:Random forest: Accuracy on training Data: 0.821
+INFO:root:Random forest: Accuracy on test Data: 0.818
+INFO:root:Cross-validation scores: [0.8075   0.81625  0.81625  0.83125  0.818125]
+INFO:root:Mean CV accuracy: 0.818
+INFO:root:Best parameters: {'max_depth': None, 'n_estimators': 100}
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+INFO:root:Random forest: Accuracy on training Data: 0.819
+INFO:root:Random forest: Accuracy on test Data: 0.816
+INFO:root:Cross-validation scores: [0.80875  0.814375 0.809375 0.835    0.818125]
+INFO:root:Mean CV accuracy: 0.817
+INFO:root:Best parameters: {'max_depth': None, 'n_estimators': 50}
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 185-652-203
+INFO:root:Random forest: Accuracy on training Data: 0.820
+INFO:root:Random forest: Accuracy on test Data: 0.817
+INFO:root:Cross-validation scores: [0.8125   0.820625 0.81     0.8275   0.818125]
+INFO:root:Mean CV accuracy: 0.818
+INFO:root:Best parameters: {'max_depth': None, 'n_estimators': 150}
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Random forest: Accuracy on training Data: 0.821
+INFO:root:Random forest: Accuracy on test Data: 0.816
+INFO:root:Cross-validation scores: [0.8125   0.81625  0.81375  0.833125 0.81625 ]
+INFO:root:Mean CV accuracy: 0.818
+INFO:root:Best parameters: {'max_depth': None, 'n_estimators': 50}
+INFO:root:Time taken for model loading: 11.786902666091919 seconds
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+INFO:root:Random forest: Accuracy on training Data: 0.814
+INFO:root:Random forest: Accuracy on test Data: 0.813
+INFO:root:Cross-validation scores: [0.81     0.81     0.815625 0.83375  0.811875]
+INFO:root:Mean CV accuracy: 0.816
+INFO:root:Best parameters: {'max_depth': None, 'n_estimators': 150}
+INFO:root:Time taken for model loading: 10.045503377914429 seconds
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 185-652-203
+INFO:root:Random forest: Accuracy on training Data: 0.818
+INFO:root:Random forest: Accuracy on test Data: 0.815
+INFO:root:Cross-validation scores: [0.808125 0.81875  0.811875 0.83375  0.81875 ]
+INFO:root:Mean CV accuracy: 0.818
+INFO:root:Best parameters: {'max_depth': None, 'n_estimators': 100}
+INFO:root:Time taken for model loading: 13.46686339378357 seconds
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Random forest: Accuracy on training Data: 0.821
+INFO:root:Random forest: Accuracy on test Data: 0.818
+INFO:root:Cross-validation scores: [0.808125 0.8125   0.81875  0.8325   0.815625]
+INFO:root:Mean CV accuracy: 0.818
+INFO:root:Best parameters: {'max_depth': None, 'n_estimators': 50}
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m

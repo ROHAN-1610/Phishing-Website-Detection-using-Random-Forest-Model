@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Analysis</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Chart.js CSS -->
+    <link rel="styleshet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/analysis.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+
+<body>
+    <!-- Analysis Page Content -->
+    <div class="container mt-5">
+        <h1 class="text-center">URL Analysis</h1>
+
+        <!-- Placeholder for data visualization -->
+        <canvas id="chartContainer" style="height: 300px;"></canvas>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <!-- jQuery (if needed) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS (if needed) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+    <!-- Custom JavaScript for data visualization -->
+    <script>
+        // Function to fetch data from the API
+async function fetchData(url) {
+    try {
+        const response = await fetch(url); // Fetch data from the provided URL
+        if (!response.ok) {
+            throw new Error('Failed to fetch data');
+        }
+        const data = await response.json(); // Parse response as JSON
+        return data;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        return null;
+    }
+}
+
+// Function to update the chart with fetched data
+async function updateChartWithData() {
+    const url = document.getElementById('urlInput').value.trim(); // Get the URL from the input field
+    if (url) {
+        const data = await fetchData(url); // Fetch data using the provided URL
+        if (data) {
+            // Update chart data and redraw
+            urlAnalyticsChart.data.datasets[0].data = [data.phishingPercentage, data.legitimatePercentage];
+            urlAnalyticsChart.update();
+        }
+    } else {
+        console.error('URL input is empty');
+    }
+}
+
+// Sample data representing the percentage of phishing and legitimate URLs
+const data = {
+    labels: ['Phishing', 'Legitimate'],
+    datasets: [{
+        data: [30, 70], // Example data, replace with actual data
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.7)', // Red color for phishing
+            'rgba(54, 162, 235, 0.7)' // Blue color for legitimate
+        ],
+        borderWidth: 1
+    }]
+};
+
+// Configuration options for the chart
+const options = {
+    responsive: true,
+    plugins: {
+        title: {
+            display: true,
+            text: 'Percentage of Phishing vs Legitimate URLs'
+        }
+    }
+};
+
+// Get the canvas element
+const ctx = document.getElementById('chartContainer').getContext('2d');
+
+// Create the pie chart
+const urlAnalyticsChart = new Chart(ctx, {
+    type: 'pie',
+    data: data,
+    options: options
+});
+
+// Call the function to initially fetch and update data
+updateChartWithData();
+
+    </script>
+</body>
+
+</html>

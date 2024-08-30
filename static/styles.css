@@ -1,0 +1,380 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333; /* Text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+a {
+    color: #0088cc;
+}
+
+h1, h2, h4, h5, h6 {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #444;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for link color */
+}
+
+nav ul li a:hover {
+    color: green;
+}
+
+/* Search Bar */
+.form-inline input[type="search"] {
+    width: 300px; /* Adjust the width as needed */
+}
+
+/* Search Button */
+.form-inline button[type="submit"] {
+    background-color: #28a745; /* Green color */
+    color: white;
+    border-color: #28a745; /* Green color */
+}
+
+.form-inline button[type="submit"]:hover {
+    background-color: #218838; /* Darker green color on hover */
+    border-color: #218838; /* Darker green color on hover */
+}
+
+
+/* Header Styles */
+header {
+    padding: 50px;
+    text-align: center;
+    background-color: #f2f2f2;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+header p {
+    color: #666;
+}
+
+/* URL Checker Section Styles */
+.url-checker-section {
+    padding: 20px;
+    background-color: lightskyblue; /* White background */
+    border-radius: 10px;
+    border-color: #007bff;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 30px; /* Add margin bottom to create space */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+    border: 2px solid #007bff;
+}
+
+.url-checker-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.url-checker-section form {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.url-checker-section input[type="text"] {
+    padding: 20px;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.url-checker-section button {
+    padding: 15px 30px;
+    background-color: #008CBA;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.url-checker-section button:hover {
+    background-color: #005F7D;
+}
+
+/* How it Works Section Styles */
+.how-it-works-section {
+    padding: 20px;
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px; /* Add margin bottom to create space */
+}
+
+.how-it-works-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.how-it-works-section p {
+    text-align: justify;
+}
+
+.how-it-works-section .btn-block {
+    margin-top: 20px;
+}
+
+/* What is Phishing Section */
+.what-is-phishing-section {
+    padding: 50px 0; /* Add padding to the section */
+    background-color: #fff; /* White background */
+}
+
+.what-is-phishing-section h2 {
+    margin-bottom: 20px; /* Add bottom margin to the headings */
+}
+
+/* Types of Phishing Section */
+.types-of-phishing-section {
+    padding: 50px 0; /* Add padding to the section */
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+/* Types of Phishing Section heading styles */
+.types-of-phishing-section h1 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add bottom margin to the headings */
+}
+
+.types-of-phishing-section h2 {
+    margin-bottom: 20px; /* Add bottom margin to the headings */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    body {
+        font-size: 18px;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .url-checker-section input[type="text"] {
+        margin-bottom: 10px;
+    }
+
+    .url-checker-section {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adjusted box-shadow for smaller screens */
+    }
+
+    .how-it-works-section,
+    .what-is-phishing-section,
+    .types-of-phishing-section {
+        padding: 20px;
+    }
+
+    .section-padding {
+        padding: 20px; /* Created a separate class for padding */
+    }
+}
+
+/* Footer styling */
+.footer-wrap {
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+    bottom: 0;
+}
+
+.footer-wrap-1,
+.footer-wrap-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-section a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+    color: #ffc107; /* Change color on hover */
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.footer-section form {
+    display: flex;
+    align-items: center;
+}
+
+.footer-section input[type="email"] {
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 100%;
+}
+
+.footer-section input[type="email"]:focus {
+    outline: none;
+    border-color: #ffc107; /* Change border color on focus */
+}
+
+.footer-section button {
+    padding: 10px 20px;
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.footer-section button:hover {
+    background-color: #ffa000; /* Darken background color on hover */
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    margin-bottom: 20px; /* Added margin-bottom */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center; /* Center align content */
+}
+
+.first-box,
+.last-box {
+    flex: 1;
+    text-align: center;
+}
+
+.first-box a,
+.last-box a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.first-box a:hover,
+.last-box a:hover {
+    text-decoration: underline;
+    color: #ffc107; /* Change color on hover */
+}
+
+/* Social links */
+.social-link {
+    display: flex;
+    align-items: center;
+    margin-left: 5px; /* Adjusted margin-left */
+}
+
+.social-link a {
+    margin-left: 10px;
+    transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.social-link a:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+.social-link img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.social-link img:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+/* Line separator */
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    margin: 10px 0; /* Added margin */
+}
+
+/* Footer bottom */
+.footer-bottom {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
+    margin-right: 10px; /* Adjusted margin-right */
+}
+
+.footer-bottom a:hover {
+    color: #ffc107; /* Change color on hover */
+}
+

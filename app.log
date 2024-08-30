@@ -1,0 +1,24 @@
+2024-02-26 18:18:11,516 - INFO - Loading data for model training...
+2024-02-26 18:18:11,985 - INFO - Random forest: Accuracy on training Data: 0.816
+2024-02-26 18:18:11,985 - INFO - Random forest: Accuracy on test Data: 0.814
+2024-02-26 18:18:13,611 - INFO - Cross-validation scores: [0.805    0.816875 0.811875 0.83125  0.81125 ]
+2024-02-26 18:18:13,611 - INFO - Mean CV accuracy: 0.8152500000000001
+2024-02-26 18:18:22,985 - INFO - Best parameters: {'max_depth': None, 'n_estimators': 100}
+2024-02-26 18:18:23,036 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-26 18:18:23,036 - INFO - [33mPress CTRL+C to quit[0m
+2024-02-26 18:19:55,320 - INFO - Loading data for model training...
+2024-02-26 18:19:55,759 - INFO - Random forest: Accuracy on training Data: 0.817
+2024-02-26 18:19:55,759 - INFO - Random forest: Accuracy on test Data: 0.814
+2024-02-26 18:19:57,464 - INFO - Cross-validation scores: [0.80125  0.8175   0.814375 0.83125  0.814375]
+2024-02-26 18:19:57,464 - INFO - Mean CV accuracy: 0.8157500000000001
+2024-02-26 18:20:05,798 - INFO - Best parameters: {'max_depth': None, 'n_estimators': 150}
+2024-02-26 18:20:05,861 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-26 18:20:05,861 - INFO - [33mPress CTRL+C to quit[0m
+2024-02-26 18:26:05,623 - INFO - Loading data for model training...
+2024-02-26 18:26:06,010 - INFO - Random forest: Accuracy on test Data: 0.817
+2024-02-26 18:26:15,814 - INFO - Best parameters: {'max_depth': None, 'n_estimators': 50}
+2024-02-26 18:26:15,846 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-02-26 18:26:15,846 - INFO - [33mPress CTRL+C to quit[0m

@@ -1,0 +1,651 @@
+https://<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHISH GUARD</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <!--    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">-->
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+</head>
+
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">
+        <img src="static/images/rsz_2phishguard.png" alt="Phishing Image">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">REPORT URL</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://typosquatting-finder.circl.lu/" target="_blank">TYPOSQUATTING</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">LOGIN</a>
+            </li>
+
+        </ul>
+        <!-- Search Bar -->
+        <form class="form-inline my-2 my-lg-0 ml-auto">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<!-- Header Section -->
+<header class="jumbotron text-center">
+    <div class="container">
+        <h1 class="display-4">Don't get Hooked by a Phish again!</h1>
+        <p class="lead">Don't get caught in a phishing trap. Happens 2.6 million times a year, but with our app, you can
+            protect
+            yourself.</p>
+    </div>
+</header>
+
+<!-- URL Checker Section -->
+<section class="url-checker-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 mx-auto">
+                <h2 class="text-center mb-4">🔍 URL Checker</h2>
+                <form id="urlForm" onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <label for="urlInput">Enter the URL you want to check:</label>
+                        <input type="text" id="urlInput" class="form-control" placeholder="https://example.com">
+                        <span id="urlError" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Select a detection model:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="model" value="RandomForest"
+                                   checked>
+                            <label class="form-check-label">Random Forest Model</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="model" value="None">
+                            <label class="form-check-label">None</label>
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="button" class="btn btn-primary mr-2"
+                                onclick="detectURL()">🔍 Detect URL
+                        </button>
+                        <button type="button" class="btn btn-secondary"
+                                onclick="clearForm()">🔄 Clear
+                        </button>
+                    </div>
+                </form>
+                <div id="loadingSpinner" class="spinner"></div>
+                <div id="result" class="result-container"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Combined Section -->
+<section class="combined-section custom-background">
+    <div class="container">
+        <!-- How it Works -->
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="text-center mb-4">How does it Work?</h2>
+                <p class="text-justify">Phishing is a prevalent online scam where criminals impersonate legitimate
+                    sites. To combat this threat, we have implemented an advanced system that combines multiple
+                    techniques for efficient detection of malicious URLs. Our system employs an Artificial Neural
+                    Network trained on a dataset of 600,000 URLs and enhances its capabilities by extensively
+                    analyzing the top 1 million URLs on the World Wide Web. Furthermore, we cross-reference these
+                    URLs with blacklists from trusted sources like Google, Norton, URLVoid, and others. These
+                    comprehensive upgrades empower our system to identify and protect users from malicious websites
+                    providing robust defense against phishing scams.</p>
+                <a href="#" class="btn btn-primary btn-block">LEARN MORE</a>
+            </div>
+        </div>
+        <!-- What is Phishing -->
+        <div class="row">
+            <div class="col-md-10">
+                <h2>What is Phishing?</h2>
+                <p>Phishing is a cybercrime where targets are contacted by email, phone, or text message by someone
+                    posing as a legitimate institution to lure individuals into providing sensitive data such as
+                    personally identifiable information, banking and credit card details, and passwords.</p>
+            </div>
+        </div>
+        <!-- Types of Phishing -->
+        <h1>Types of Phishing</h1>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <h2>1. Email Phishing</h2>
+                <p>Email phishing is a common method used by cybercriminals to trick individuals into revealing
+                    sensitive information or downloading malicious attachments. Here's a video explaining email
+                    phishing:</p>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/o0btqyGWIQw"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h2>2. Spear Phishing</h2>
+                <p>Spear phishing is a targeted form of phishing where attackers customize their attacks for specific
+                    individuals or organizations. Watch this video to learn more:</p>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fZc2oXfz9Qs"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <h2>3. Clone Phishing</h2>
+                <p>Clone phishing involves creating a nearly identical copy of a legitimate email or website to deceive
+                    recipients. Watch this video to understand how clone phishing works:</p>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GvNc_LNhlRk"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h2>4. Pharming</h2>
+                <p>Pharming involves redirecting users from legitimate websites to fraudulent ones without their
+                    knowledge. Watch this video to learn more about pharming:</p>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/20FAWUVo3as"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 footer-section">
+                <h3>About</h3>
+                <a href="#">Services</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Pricing</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-section">
+                <h3>Resources</h3>
+                <a href="#">Docs</a>
+                <a href="#">Blog</a>
+                <a href="#">eBooks</a>
+                <a href="#">Videos</a>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-section">
+                <h3>Contact</h3>
+                <a href="#">Help</a>
+                <a href="#">Sales</a>
+                <a href="#">Advertise</a>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-section">
+                <h3>Stay Connected</h3>
+                <p>Subscribe to our newsletter to receive the latest news.</p>
+                <form action="">
+                    <input type="email" name="email" id="email" placeholder="Enter Email">
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="first-box">
+                        <a href="#">Terms & Conditions</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="last-box">
+                        <a href="#">&copy; Copyright 2024 PhishGuard. Inc</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Custom JavaScript -->
+<script>
+    // Function to detect phishing URL
+    function detectURL() {
+        var url = document.getElementById("urlInput").value.trim();
+        var resultElement = document.getElementById("result");
+
+        // Clear previous results
+        resultElement.innerHTML = "";
+
+        // Validate URL
+        if (url === "") {
+            showError("Please enter a URL.");
+            return;
+        }
+
+        // Check if the URL starts with "https" or "www"
+        var isPhishing = inputIsPhishing(url);
+
+        // Display result or error message
+        if (isPhishing === null) {
+            showResult(`You entered an incorrect URL. Please check again.`, "error");
+        } else if (!isPhishing) {
+            showResult(`The URL ${url} is identified as a legitimate site.`, "success");
+        } else {
+            showResult(`The URL ${url} is identified as a phishing site.`, "error");
+        }
+    }
+
+    // Function to check if input is a phishing URL
+    function inputIsPhishing(url) {
+        // Check if the input is a valid URL
+        try {
+            new URL(url);
+        } catch (error) {
+            return null; // Not a valid URL
+        }
+
+        // Check if the URL starts with "https" or "www"
+        if (url.startsWith("https://") || url.startsWith("www.")) {
+            return false; // It's a legitimate website
+        } else if (url.startsWith("http://")) {
+            return true; // It's a phishing website
+        } else {
+            return true; // It's not a valid URL (consider it phishing)
+        }
+    }
+
+    // Function to clear the form
+    function clearForm() {
+        document.getElementById("urlInput").value = ""; // Clear input field
+        document.getElementById("result").innerHTML = ""; // Clear result message
+        clearError(); // Clear any error message
+    }
+
+    function submitForm(event) {
+        event.preventDefault(); // Prevent form submission
+        var url = document.getElementById("urlInput").value.trim();
+
+
+        // Send AJAX request to Flask backend
+        $.ajax({
+            type: "POST",
+            url: "/save-url",
+            contentType: "application/json",
+            data: JSON.stringify({"url": url}),
+            success: function (response) {
+                console.log("URL saved to database:", response);
+                // Optionally, display a success message to the user
+                // Display success message
+                var resultContainer = document.getElementById("result");
+                resultContainer.innerHTML = '<p class="text-success">URL saved successfully!</p>';
+            },
+            error: function (errorz) {
+                console.error("Error saving URL:", error);
+                // Optionally, display an error message to the user
+                var resultContainer = document.getElementById("result");
+                resultContainer.innerHTML = '<p class="text-danger">Error saving URL. Please try again.</p>';
+            }
+        });
+    }
+
+    // Function to display error message
+    function showError(message) {
+        var errorElement = document.getElementById("urlError");
+        errorElement.textContent = message;
+        errorElement.style.display = "block";
+    }
+
+    // Function to clear error message
+    function clearError() {
+        var errorElement = document.getElementById("urlError");
+        errorElement.textContent = "";
+        errorElement.style.display = "none";
+    }
+
+    // Function to display result message
+    function showResult(message, messageType) {
+        var resultContainer = document.getElementById("result");
+        var resultMessage = '<p class="';
+
+        // Determine message type
+        if (messageType === "error") {
+            resultMessage += 'text-danger">';
+        } else if (messageType === "success") {
+            resultMessage += 'text-success">';
+        } else {
+            resultMessage += 'text-warning">';
+        }
+
+        resultMessage += message + '</p>';
+
+        resultContainer.innerHTML = resultMessage;
+    }
+</script>
+</body>
+
+</html>
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #e0e0e0, #bdbdbd); /* Grey gradient background */
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Links */
+a {
+    color: #2196f3; /* Blue color */
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    color: #1976d2; /* Darker blue */
+    text-decoration: underline;
+}
+
+/* Headings */
+h1, h2, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    color: #444;
+}
+
+/* Navigation Styles */
+nav {
+    background: linear-gradient(to right, #000000, #333333); /* Black gradient background */
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e3f2fd; /* Light blue */
+}
+
+/* Search Bar */
+.form-inline input[type="search"] {
+    width: 300px;
+    border-radius: 25px;
+    border: 1px solid #2196f3; /* Blue border */
+    transition: border-color 0.3s ease;
+}
+
+.form-inline input[type="search"]:focus {
+    border-color: #1976d2; /* Darker blue border */
+}
+
+/* Search Button */
+.form-inline button[type="submit"] {
+    background-color: #2196f3; /* Blue background */
+    color: white;
+    border-color: #2196f3;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.form-inline button[type="submit"]:hover {
+    background-color: #1976d2; /* Darker blue */
+    border-color: #1976d2;
+}
+
+/* Header Styles */
+header {
+    padding: 50px;
+    text-align: center;
+    background: #000000; /* Black background */
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+header p {
+    color: #bbdefb; /* Light blue */
+    font-size: 1.2em;
+}
+
+/* URL Checker Section Styles */
+.url-checker-section {
+    padding: 20px;
+    background: #ffffff; /* White background */
+    border-radius: 10px;
+    border: 2px solid #2196f3; /* Blue border */
+    margin: 0 100px 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.url-checker-section:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    background-color: #f1f8f7;
+}
+
+.url-checker-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2196f3; /* Blue color */
+}
+
+.url-checker-section form {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.url-checker-section input[type="text"] {
+    padding: 20px;
+    width: 100%;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #2196f3; /* Blue border */
+}
+
+.url-checker-section button {
+    padding: 15px 30px;
+    background-color: #2196f3; /* Blue background */
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.url-checker-section button:hover {
+    background-color: #1976d2; /* Darker blue */
+    transform: scale(1.05);
+}
+
+/* How it Works Section Styles */
+.how-it-works-section {
+    padding: 20px;
+    background: #f8f9fa; /* Light grey background */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.how-it-works-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2196f3; /* Blue color */
+}
+
+.how-it-works-section p {
+    text-align: justify;
+}
+
+/* What is Phishing Section */
+.what-is-phishing-section {
+    padding: 50px 0;
+    background-color: #ffffff; /* White background */
+}
+
+.what-is-phishing-section h2 {
+    margin-bottom: 20px;
+    color: #2196f3; /* Blue color */
+}
+
+/* Types of Phishing Section */
+.types-of-phishing-section {
+    padding: 50px 0;
+    background: #f8f9fa; /* Light grey background */
+}
+
+.types-of-phishing-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2196f3; /* Blue color */
+}
+
+.types-of-phishing-section h2 {
+    margin-bottom: 20px;
+    color: #2196f3; /* Blue color */
+}
+
+/* Footer styling */
+.footer-wrap {
+    background: #000000; /* Black background */
+    color: #fff;
+    padding: 30px;
+    bottom: 0;
+}
+
+.footer-section {
+    padding: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #bbdefb; /* Light blue */
+}
+
+.footer-section a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+    color: #e3f2fd; /* Light blue */
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.footer-section form {
+    display: flex;
+    align-items: center;
+}
+
+.footer-section input[type="email"] {
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 100%;
+}
+
+.footer-section input[type="email"]:focus {
+    outline: none;
+    border-color: #e3f2fd; /* Light blue */
+}
+
+.footer-section button {
+    padding: 10px 20px;
+    background-color: #e3f2fd; /* Light blue background */
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-section button:hover {
+    background-color: #bbdefb; /* Light blue */
+    transform: scale(1.05);
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-right: 10px;
+}
+
+.footer-bottom a:hover {
+    color: #e3f2fd; /* Light blue */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
